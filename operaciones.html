@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("tkMyALqXKtUfxbB0H"); // Inicializa con tu clave pública
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form id="formulario">
+        <label for="precio">Precio por unidad:</label>
+        <input type="number" id="precio" required>
+        
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" required>
+        
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" required></textarea>
+        
+        <button type="submit" onclick="sendPersonalForm(event)">Enviar</button>
+        <button type="reset">Limpiar</button>
+    </form>
+    <div id="tabla-operaciones">
+        <table>
+            <thead>
+                <tr>
+                    <th>OPERACIÓN</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>BOTONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CÁLCULO PRECIO TOTAL</td>
+                    <td>Calcula el precio total por la cantidad</td>
+                    <td><button onclick="calcularPrecioTotal()">Calcular</button></td>
+                </tr>
+                <tr>
+                    <td>CÁLCULO 30% PRECIO</td>
+                    <td>Calcula el 30% de descuento sobre el precio total</td>
+                    <td><button onclick="calcularDescuento30()">Calcular</button></td>
+                </tr>
+                <tr>
+                    <td>CÁLCULO 25% DESCUENTO</td>
+                    <td>Calcula un 25% de descuento sobre el precio por la cantidad</td>
+                    <td><button onclick="calcularDescuento25()">Calcular</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

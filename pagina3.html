@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Página API</h1>
+        <section>
+            <h2>API Correo</h2>
+            <form id="email-form">
+                <input type="email" id="to_email" placeholder="Correo Destinatario" required>
+                <textarea id="message" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section>
+            <h2>API Imágenes</h2>
+            <div id="gallery"></div>
+            <button onclick="loadImages()">Cargar Imágenes</button>
+        </section>
+        <section>
+            <h2>API Noticias</h2>
+            <div id="news-container"></div>
+            <button onclick="loadNews()">Cargar Noticias</button>
+        </section>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("tkMyALqXKtUfxbB0H"); // Inicializa con tu clave pública
+        })();
+    </script>
+    <!-- Elimina la segunda inclusión de script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("tkMyALqXKtUfxbB0H"); // Inicializa con tu clave pública
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario</h1>
+        <form id="form">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="text" id="surname" placeholder="Apellido" required>
+            <input type="number" id="score" placeholder="Calificación" required>
+            <textarea id="observations" placeholder="Observaciones" required></textarea>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </div>
+    
+</body>
+</html>
